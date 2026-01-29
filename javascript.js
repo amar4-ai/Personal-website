@@ -3,6 +3,22 @@
 const scriptURL = 'https://script.google.com/macros/s/AKfycbxEwtJISaz9I9Pw2843SUCIl0XBK_vSeXfGPdpnHQY3NY-Id6vZMRnDBqnOBS3Ujy6C/exec'
 const form = document.forms['submit-to-google-sheet']
 const msg = document.getElementById("msg")
+const cameraFeed = document.getElementById('cameraFeed');
+const button = document.getElementById('startBtn');
+
+button.addEventListener('click', async () =>{
+    try {
+        const stream = await navigator.mediaDevices.getUserMedia({video: true});
+ cameraFeed.srcObject = stream;
+ button.style.display = 'none'; // hide button once camera starts
+
+    } catch (error) {
+        alert('camera access denied or not available');
+        console.error(error);
+    }
+});
+
+
 
 
 form.addEventListener("submit", function (e) {
