@@ -382,28 +382,3 @@ nav ul .fa-solid{
     margin-top: 20px;
     display: block;
 }
-/* 
-for website camera stream
-
-*/
-video {
-    width: 400px;
-    height: 300px;
-    border: 2px solid #333;
-    border-radius: 10px;
-    background: #000;
-
-}
-button {
-    margin-top: 10px;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 6px;
-    background: #007bff;
-    color: white;
-    cursor: pointer;
-
-}
-button:hover {
-    background: #0056b3;
-}
